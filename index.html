@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cumpleaños Mágico de Kelly</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- SECCIÓN 1: HEADER CON CUENTA REGRESIVA -->
+    <header class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <img src="images/pie.png" alt="Tinkerbell" class="floating-image pie-image" data-parallax="0.5">
+        <div class="hero-content">
+            <h1 class="hero-title">✨ El Cumpleaños Mágico de Kelly ✨</h1>
+            <p class="hero-subtitle">5 de Abril de 2026 12:00 MD</p>
+            
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">0</span>
+                    <span class="countdown-label">Días</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">0</span>
+                    <span class="countdown-label">Horas</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">0</span>
+                    <span class="countdown-label">Minutos</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">0</span>
+                    <span class="countdown-label">Segundos</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN 2: INFORMACIÓN DEL CUMPLEAÑOS -->
+    <section class="about">
+        <img src="images/sentada.png" alt="Kelly sentada" class="floating-image sentada-image" data-parallax="0.3">
+        <div class="about-container">
+            
+            <div class="about-content">
+                <h2>🧚‍♀️ Un Hada Especial</h2>
+                <h3>Kelly April Murillo Quesada</h3>
+                <p>Como en el mundo mágico de Nunca Jamás, Kelly brilla con su propia magia especial. Este día tan importante, nos reunimos para celebrar a esta persona extraordinaria que llena nuestras vidas de luz, alegría y momentos mágicos.</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: CONFIRMACIÓN DE ASISTENCIA -->
+    <section class="rsvp">
+        <img src="images/volando.png" alt="Hada volando" class="floating-image volando-image" data-parallax="0.4">
+        <div class="rsvp-container">
+            <h2>🌟 Confirma tu Asistencia 🌟</h2>
+            <p class="rsvp-subtitle">Tu magia es importante para nosotros</p>
+            <p class="rsvp-description">Por favor, confirma tu participación en esta aventura mágica enviando un mensaje por WhatsApp. Cuéntanos cuántas personas compartirán este momento especial.</p>
+            
+            <a href="https://wa.me/50688974114?text=Yo%20confirmo%20mi%20asistencia%20al%20cumplea%C3%B1os%20de%20Kelly%2C%20con%20las%20siguientes%20personas%3A" 
+               target="_blank" 
+               class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i>
+                Confirmar por WhatsApp
+            </a>
+            
+            <p class="whatsapp-number">
+                <i class="fas fa-phone"></i>
+                (506) 8897-4114
+            </p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: UBICACIÓN -->
+    <section class="location">
+        <img src="images/mapa.png" alt="Ubicación" class="floating-image mapa-image" data-parallax="0.3">
+        <div class="location-container">
+            <div class="location-info">
+                <h2>📍 La Ruta Mágica 📍</h2>
+                <p>Te esperamos en este lugar encantado:</p>
+                <div class="address-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <p><strong>Lugar:</strong>Rancho del estadio de Pindeco, al ser las 12 md del 5 de Abril de 2026</p>
+                        <p class="address-note">Abre Google Maps para ver la ubicación exacta</p>
+                    </div>
+                </div>
+                <a href="https://www.google.com/maps/?q=9.147907,-83.333548" 
+                   target="_blank" 
+                   class="maps-btn">
+                    <i class="fas fa-map"></i>
+                    Ver en Google Maps
+                </a>
+            </div>
+            <div class="location-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.0549179999996!2d-83.333548!3d9.147907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d8b6c8b6c8b7%3A0x0!2zOcKwMDgnNTEuNyJOIDgzwrAyMCcwMS40Ilc!5e0!3m2!1ses!2scr!4v1234567890" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 El Cumpleaños Mágico de Kelly | Hecho con <i class="fas fa-heart"></i> y Polvo de Hada ✨</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

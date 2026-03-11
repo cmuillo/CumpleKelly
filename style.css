@@ -1,0 +1,617 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: #2d5a4a;
+    line-height: 1.6;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(111, 161, 50, 0.8) 0%, rgba(90, 140, 42, 0.8) 50%, rgba(73, 107, 31, 0.8) 100%),
+                url('images/fondo1.jpg') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+/* IMÁGENES FLOTANTES CON PARALLAX */
+.floating-image {
+    position: absolute;
+    z-index: 3;
+    max-height: 60vh;
+    max-width: 80%;
+    object-fit: contain;
+    opacity: 0.9;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
+}
+
+.pie-image {
+    bottom: -5%;
+    right: 2%;
+    max-width: 45%;
+    max-height: 80%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.volando-image {
+    top: 10%;
+    left: 2%;
+    max-width: 40%;
+    max-height: 60%;
+    animation: float 7s ease-in-out infinite;
+}
+
+.sentada-image {
+    bottom: -15%;
+    right: 3%;
+    max-width: 30%;
+    max-height: 55%;
+    animation: float 8s ease-in-out infinite;
+}
+
+.mapa-image {
+    bottom: -10%;
+    left: 2%;
+    max-width: 32%;
+    max-height: 50%;
+    animation: float 9s ease-in-out infinite;
+    z-index: 10;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: white;
+    animation: fadeInDown 1s ease-out;
+    margin-top: 0px;
+}
+
+.hero-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3), 0 0 20px rgba(218, 165, 32, 0.4);
+    animation: scaleIn 0.8s ease-out;
+    color: #fff;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 60px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* COUNTDOWN */
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(2, 110px);
+    justify-content: center;
+    gap: 20px;
+    animation: fadeInUp 1s ease-out 0.3s both;
+    padding: 0 20px;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);\n    backdrop-filter: blur(10px);
+    padding: 0;
+    border-radius: 15px;
+    border: 2px solid rgba(218, 165, 32, 0.6);
+    width: 110px;
+    height: 110px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.countdown-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(218, 165, 32, 0.3), 0 0 20px rgba(26, 188, 156, 0.3);
+}
+
+.countdown-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+    font-family: 'Fredoka', sans-serif;
+    line-height: 1;
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ABOUT SECTION */
+.about {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, rgba(240, 248, 245, 0.95) 0%, rgba(232, 247, 244, 0.95) 100%),
+                url('images/fondo.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 4;
+}
+
+.about-content h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 3rem;
+    color: #496b1f;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-content h3 {
+    font-size: 2rem;
+    color: #6fa132;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.highlight-item {
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #6fa132;
+}
+
+.highlight-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(111, 161, 50, 0.2);
+}
+
+.highlight-item i {
+    font-size: 2.5rem;
+    color: #6fa132;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.highlight-item p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* RSVP SECTION */
+.rsvp {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #6fa132 0%, #5a8c2a 50%, #496b1f 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.rsvp-container {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 4;
+}
+
+.rsvp h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.rsvp-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    opacity: 0.95;
+    font-weight: 500;
+}
+
+.rsvp-description {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    line-height: 1.8;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #25D366;
+    color: white;
+    padding: 18px 45px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    border: 2px solid #25D366;
+}
+
+.whatsapp-btn:hover {
+    background: #20ba5a;
+    border-color: #20ba5a;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5), 0 0 20px rgba(111, 161, 50, 0.3);
+}
+
+.whatsapp-btn i {
+    font-size: 1.5rem;
+}
+
+.whatsapp-number {
+    margin-top: 25px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.whatsapp-number i {
+    margin-right: 8px;
+}
+
+/* LOCATION SECTION */
+.location {
+    padding: 100px 20px;
+    background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+                url('images/mapa.png') center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.location-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 4;
+}
+
+.location-info h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 3rem;
+    color: #496b1f;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.location-info p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.address-box {
+    display: flex;
+    gap: 20px;
+    background: #f0f8f5;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border-left: 4px solid #6fa132;
+}
+
+.address-box i {
+    font-size: 2rem;
+    color: #496b1f;
+    flex-shrink: 0;
+}
+
+.address-box div {
+    flex: 1;
+}
+
+.address-box p {
+    margin: 8px 0;
+}
+
+.address-note {
+    font-size: 0.9rem;
+    color: #999 !important;
+    margin-top: 10px !important;
+}
+
+.maps-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #6fa132;
+    color: white;
+    padding: 14px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(111, 161, 50, 0.3);
+}
+
+.maps-btn:hover {
+    background: #496b1f;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(111, 161, 50, 0.4);
+}
+
+.maps-btn i {
+    font-size: 1.2rem;
+}
+
+.location-map {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* FOOTER */
+.footer {
+    background: #3d5517;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 1rem;
+}
+
+.footer i {
+    color: #e74c3c;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+
+    .countdown {
+        grid-template-columns: repeat(2, 110px);
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    .countdown-item {
+        padding: 0;
+        min-width: auto;
+        width: 110px;
+        height: 110px;
+    }
+
+    .countdown-number {
+        font-size: 2rem;
+    }
+
+    .about-content h2,
+    .rsvp h2,
+    .location-info h2 {
+        font-size: 2rem;
+    }
+
+    .about-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-content p,
+    .rsvp-description {
+        font-size: 1rem;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .location-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .location-map {
+        min-height: 300px;
+    }
+
+    .whatsapp-btn,
+    .maps-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Imágenes flotantes en móvil */
+    .pie-image {
+        max-width: 55%;
+        right: -8%;
+        animation: float-mobile 6s ease-in-out infinite;
+    }
+
+    .volando-image {
+        max-width: 50%;
+        left: -10%;
+        animation: float-mobile 7s ease-in-out infinite;
+    }
+
+    .sentada-image {
+        max-width: 40%;
+        right: -10%;
+        bottom: -15%;
+        animation: float-mobile 8s ease-in-out infinite;
+    }
+
+    .mapa-image {
+        max-width: 40%;
+        left: -10%;
+        bottom: -10%;
+        animation: float-mobile 9s ease-in-out infinite;
+    }
+
+    .about {
+        background-attachment: scroll;
+    }
+}
+
+@keyframes float-mobile {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 80vh;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .countdown {
+        gap: 10px;
+        grid-template-columns: repeat(2, 110px);
+        padding: 0 20px;
+    }
+
+    .countdown-item {
+        padding: 0;
+        min-width: auto;
+        width: 110px;
+        height: 110px;
+    }
+
+    .countdown-number {
+        font-size: 1.5rem;
+    }
+
+    .countdown-label {
+        font-size: 0.8rem;
+    }
+
+    .about,
+    .rsvp,
+    .location {
+        padding: 60px 20px;
+    }
+
+    .about-content h2,
+    .rsvp h2,
+    .location-info h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Imágenes flotantes muy pequeñas en móviles pequeños */
+    .pie-image,
+    .volando-image,
+    .sentada-image,
+    .mapa-image {
+        opacity: 0.7;
+        max-width: 60%;
+    }
+}
