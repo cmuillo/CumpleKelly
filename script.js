@@ -1,3 +1,21 @@
+// Función para reproducir la música de fondo
+function playBirthdayMusic() {
+    const audio = document.getElementById('birthdayMusic');
+    if (audio) {
+        // Intentar reproducir la música
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log('No se pudo reproducir la música automáticamente. El navegador requiere interacción del usuario.');
+                // Reproducir cuando el usuario haga clic en la página
+                document.addEventListener('click', () => {
+                    audio.play();
+                }, { once: true });
+            });
+        }
+    }
+}
+
 // Función para actualizar la cuenta regresiva
 function updateCountdown() {
     // Fecha objetivo: 5 de abril de 2026
@@ -56,6 +74,7 @@ function updateParallax() {
 
 // Ejecutar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
+    playBirthdayMusic();
     updateCountdown();
     updateParallax();
 });
